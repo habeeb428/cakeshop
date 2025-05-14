@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Cake Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1559599746-1f28d7f6a103');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7); /* Semi-transparent overlay for readability */
+            z-index: -1;
+        }
+        #home {
+            background-image: url('wmremove-transformed.png'); /* New cake shop-themed background */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Darker overlay for Home section */
+            z-index: -1;
+        }
+        .animate-slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .cake-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        /* Add this CSS for the Contact section background */
+        #contact {
+            background-image: url('wmremove-transformed (1).png'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+            z-index: -1;
+        }
+        /* Add this CSS for the Order section background */
+        #order {
+            background-image: url('DeWatermark.ai_1746186645510.png'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #order::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+            z-index: -1;
+        }
+        /* Add this CSS for the About section background */
+        #about {
+            background-image: url('wmremove-transformed (2).png'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: rgb(0, 0, 0); /* Adjust text color for readability */
+        }
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+            z-index: -1;
+        }
+        /* Add this CSS for the Menu section background */
+        #menu {
+            background-image: url('wmremove-transformed (3).png'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: rgb(0, 0, 0); /* Adjust text color for readability */
+        }
+        #menu::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent overlay for readability */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-pink-500 text-white p-4 sticky top-0 z-10 animate-fade-in">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Sweet Delights</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#menu" class="hover:underline">Menu</a></li>
+                <li><a href="#order" class="hover:underline">Order</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center">
+        <div class="text-center text-white bg-black bg-opacity-50 p-8 rounded-lg animate-slide-in">
+            <h2 class="text-5xl font-bold mb-4">Welcome to Sweet Delights</h2>
+            <p class="text-xl mb-6">Indulge in our delicious cakes made with love!</p>
+            <a href="#order" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600">Order Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 animate-slide-in">About Us</h2>
+            <p class="text-lg text-center max-w-2xl mx-auto animate-fade-in bg-white bg-opacity-80 p-4 rounded">
+                Sweet Delights has been crafting delectable cakes since 2010. Our bakers use only the finest ingredients to create unforgettable flavors for every occasion.AND Sweet Delight, a charming cake shop nestled in the heart of the town, is a haven for dessert lovers. With its warm, inviting ambiance and the irresistible aroma of freshly baked goods, it draws in customers seeking indulgent treats. The shop specializes in handcrafted cakes, from classic chocolate fudge to elegant tiered masterpieces for weddings and celebrations. Each creation is made with premium ingredients, ensuring every bite bursts with flavor. Friendly staff and a cozy seating area make it a perfect spot to savor a slice of cake with coffee or to order custom confections for special occasions. Sweet Delight is where sweetness meets perfection.
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 animate-slide-in">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Chocolate Cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">Chocolate Dream</h3>
+                    <p class="text-gray-600">Rich chocolate cake with creamy ganache.</p>
+                    <p class="text-pink-500 font-bold">₹990</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="download.jpg" alt="Vanilla Cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">Vanilla Bliss</h3>
+                    <p class="text-gray-600">Light vanilla cake with buttercream frosting.</p>
+                    <p class="text-pink-500 font-bold">₹1220</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="download (1).jpg" alt="Red Velvet Cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">Red Velvet Royale</h3>
+                    <p class="text-gray-600">Classic red velvet with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹880</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="download (2).jpg" alt="black forest" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">black forest Cake</h3>
+                    <p class="text-gray-600">Classic blacke forest with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹1500</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="image (13).jpg" alt="black forest" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">stawbery cake </h3>
+                    <p class="text-gray-600">Classic blacke forest with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹1200</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="download (3).jpg" alt="vanilla sponge cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">vanilla sponge cake </h3>
+                    <p class="text-gray-600">Classic vanilla sponge cake with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹1250</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="hi.jpg" alt="Tiramisu Cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">Tiramisu Cake</h3>
+                    <p class="text-gray-600">Classic Tiramisu Cake with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹2225</p>
+                </div>
+                <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                    <img src="past htinm.jpg" alt="marble Cake" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-2xl font-semibold">marble cake </h3>
+                    <p class="text-gray-600">Classic marble Cake  with cream cheese frosting.</p>
+                    <p class="text-pink-500 font-bold">₹790</p>
+                </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="sukano.jpg" alt="cheesecake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">cheesecake </h3>
+                <p class="text-gray-600">Classic cheesecake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹790</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="images (3).jpg" alt="devil's food cake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">devil's food cake </h3>
+                <p class="text-gray-600">Classic devil's food cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹1270</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="helllo.jpg" alt="Coffee Walnut Cake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">Coffee Walnut Cake </h3>
+                <p class="text-gray-600">Classic Coffee Walnut Cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹2000</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="choclate fudge.jpg" alt="Chocolate Fudge" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">Chocolate Fudge Cake </h3>
+                <p class="text-gray-600">Classic Chocolate Fudge Cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹2800</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="caroot cake.jpg" alt="carrot cake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">carrot cake</h3>
+                <p class="text-gray-600">Classic carrot cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹2900</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="dream cake.jpg" alt="dream cake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">dream cake</h3>
+                <p class="text-gray-600">Classic dream cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹2300</p>
+            </div>
+            <div class="cake-card bg-white bg-opacity-90 p-6 rounded-lg shadow-lg animate-slide-in">
+                <img src="Butterscotch cake.jpg" alt="Butterscotch cake" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="text-2xl font-semibold">Butterscotch cake</h3>
+                <p class="text-gray-600">Classic Butterscotch cake  with cream cheese frosting.</p>
+                <p class="text-pink-500 font-bold">₹2999</p>
+            </div>
+        </div>
+           
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 animate-slide-in">Place Your Order</h2>
+            <div class="max-w-lg mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg animate-slide-in">
+                <form id="orderForm" onsubmit="handleSubmit(event)">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="cake" class="block text-gray-700">Select Cake</label>
+                        <select id="cake" name="cake" class="w-full p-2 border rounded" required>
+                            <option value="Chocolate Dream">Chocolate Dream - ₹990</option>
+                            <option value="Vanilla Bliss">Vanilla Bliss - $22</option>
+                            <option value="Red Velvet Royale">Red Velvet Royale - ₹1220</option>
+                            <option value="black forest Cake">black forest Cake - ₹1500</option>
+                            <option value="stawbery cake">stawbery cake- ₹1200</option>
+                            <option value="vanilla sponge cake">vanilla sponge cake- ₹1250</option>
+                            <option value="Tiramisu Cake">Tiramisu Cake - ₹2225</option>
+                            <option value="marble cake">marble cake - ₹790</option>
+                            <option value="cheesecake">cheesecake - ₹790</option>
+                            <option value="devil's food cake">devil's food cake - ₹1270</option>
+                            <option value="Coffee Walnut Cake">Coffee Walnut Cake - ₹2000</option>
+                            <option value="Chocolate Fudge Cake">Chocolate Fudge Cake - ₹2800</option>
+                            <option value="carrot cake">carrot cake - ₹2900</option>
+                            <option value="dream cake">dream cake - ₹2300</option>
+                            <option value="Butterscotch cake">Butterscotch cake - ₹2999</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">adress</label>
+                        <textarea id="message" name="message" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 w-full">Submit Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8 animate-slide-in">Contact Us</h2>
+            <div class="max-w-lg mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg animate-slide-in">
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                    <div class="mb-4">
+                        <label for="contactName" class="block text-gray-700">Name</label>
+                        <input type="text" id="contactName" name="contactName" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contactEmail" class="block text-gray-700">Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" class="w-full p-2 border rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contactMessage" class="block text-gray-700">Message</label>
+                        <textarea id="contactMessage" name="contactMessage" class="w-full p-2 border rounded" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 w-full">Send Message</button>
+                </form>
+            </div>
+            <div class="text-center mt-6 bg-white bg-opacity-80 p-4 rounded animate-fade-in">
+                <p class="text-lg"><phone:9745663540
+                <p class="text-lg">Email: info@sweetdelights.com</p>
+                <p class="text-lg">Address: malappuram kunnumal</p>
+                <a href="https://instagram.com/rapbeebck282" target="_blank" class="px-6 py-3 text-black rounded-lg btn slide-in-right fade-in" aria-label="Visit Instagram">contact in Instagram:rapbeebck282</a>
+                <a href="https://www.youtube.com/@habeebrahmanck-d8j" target="_blank" class="px-6 py-3 text-black rounded-lg btn slide-in-right fade-in" aria-label="Visit Instagram">SEE VIDIOE IN  YOUTUBE:MRZ_CK_RAPPER </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-500 text-white p-4 text-center">
+        <p>© 2025 Sweet Delights Cake Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Order submitted! We'll contact you soon.");
+            document.getElementById("orderForm").reset();
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            alert("Message sent! We'll get back to you soon.");
+            document.getElementById("contactForm").reset();
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    window.AgentInitializer.init({
+      agentRenderURL: "https://agent.jotform.com/01969f8dba7876ccb76ed92d303b6e8c799d",
+      rootId: "JotformAgent-01969f8dba7876ccb76ed92d303b6e8c799d",
+      formID: "01969f8dba7876ccb76ed92d303b6e8c799d",
+      queryParams: ["skipWelcome=1", "maximizable=1"],
+      domain: "https://www.jotform.com",
+      isDraggable: false,
+      background: "linear-gradient(180deg, #6C73A8 0%, #6C73A8 100%)",
+      buttonBackgroundColor: "#0066C3",
+      buttonIconColor: "#FFFFFF",
+      variant: false,
+      customizations: {
+        "greeting": "Yes",
+        "greetingMessage": "Hi! How can I assist you?",
+        "openByDefault": "No",
+        "pulse": "Yes",
+        "position": "right",
+        "autoOpenChatIn": "0"
+      },
+      isVoice: false,
+    });
+  });
+</script>
